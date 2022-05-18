@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://reqres.in/api/users?page=1" method="post" class="formulario" id="form">
+            <h3 class="titulo">Nuevo Usuario</h3>
+            <input type="email" placeholder="Email" id="email">
+            <input type="text" placeholder="Nombre(s)" id="name">
+            <input type="text" placeholder="Apellido(s)" id="lastName">
+            <Label class="date">Fecha de nacimiento</Label>
+            <input type="date" id="date" placeholder="Fecha de nacimiento">
+            <input type="submit" onclick="capturar();" class="submit" id="submit">
+            <p class="warnings" id="warnings"></p>
+
+        </form>
+
+        <table id="Usuario">
+            <thead>
+                <tr class="titulos">
+                    <th>Id</th>
+                    <th>Avatar</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Fecha de nacimiento</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="validar.js"></script>
+    <script src="datos.js"></script>
+</body>
+
+</html>
